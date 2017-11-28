@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ordermanager.view.MainScreenController">
+    <children>
+        <TableView fx:id="MainPartsTable" layoutX="14.0" layoutY="134.0" prefHeight="150.0" prefWidth="326.0">
+            <columns>
+                <TableColumn fx:id="partIDColumn" prefWidth="87.0" text="Part ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="partID" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="partNameColumn" prefWidth="79.0" text="Part Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="invLevelColumn" prefWidth="78.0" text="Inv Level">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="inStock" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="partMoneyPerUnitColumn" prefWidth="81.0" text="\$ Per Unit">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TableView fx:id="MainProductsTable" layoutX="351.0" layoutY="134.0" prefHeight="150.0" prefWidth="326.0">
+            <columns>
+                <TableColumn fx:id="productIDColumn" prefWidth="87.0" text="Prod. ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="productID" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="produtNameColumn" prefWidth="79.0" text="Prod. Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="productInvLevelColumn" prefWidth="78.0" text="Inv Level">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="inStock" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="prodMoneyForUnitColumn" prefWidth="81.0" text="\$ Per Unit">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TextField editable="false" layoutX="14.0" layoutY="78.0" prefHeight="56.0" prefWidth="326.0" text="Parts" />
+        <TextField editable="false" layoutX="351.0" layoutY="78.0" prefHeight="56.0" prefWidth="326.0" text="Products" />
+        <TextArea editable="false" layoutX="14.0" layoutY="22.0" prefHeight="56.0" prefWidth="665.0" text="Inventory Management System&#10;" />
+        <Button fx:id="mainPartsSearchHandler" layoutX="105.0" layoutY="94.0" mnemonicParsing="false" onAction="#mainPartsSearchHandler" text="Search" />
+        <Button fx:id="mainProductsSearchHandler" layoutX="469.0" layoutY="93.0" mnemonicParsing="false" onAction="#mainProductsSearchHandler" text="Search" />
+        <TextField fx:id="MainPartsSearch" layoutX="172.0" layoutY="94.0" prefHeight="25.0" prefWidth="121.0" />
+        <TextField fx:id="MainProductsSearch" layoutX="534.0" layoutY="93.0" prefHeight="25.0" prefWidth="121.0" />
+        <Button fx:id="mainExit" layoutX="621.0" layoutY="361.0" mnemonicParsing="false" onAction="#mainExit" prefHeight="25.0" prefWidth="63.0" text="Exit" />
+        <Button fx:id="mainPartsAddHandler" layoutX="97.0" layoutY="295.0" mnemonicParsing="false" onAction="#mainPartsAddHandler" prefHeight="25.0" prefWidth="52.0" text="Add" />
+        <Button fx:id="mainPartsModifyHandler" layoutX="159.0" layoutY="295.0" mnemonicParsing="false" onAction="#mainPartsModifyHandler" prefHeight="25.0" prefWidth="63.0" text="Modify" />
+        <Button fx:id="mainPartsDeleteHandler" layoutX="230.0" layoutY="295.0" mnemonicParsing="false" onAction="#mainPartsDeleteHandler" prefHeight="25.0" prefWidth="63.0" text="Delete" />
+        <Button fx:id="mainProductsAddHandler" layoutX="469.0" layoutY="295.0" mnemonicParsing="false" onAction="#mainProductsAddHandler" prefHeight="25.0" prefWidth="52.0" text="Add" />
+        <Button fx:id="mainProductsModifyHandler" layoutX="531.0" layoutY="295.0" mnemonicParsing="false" onAction="#mainProductsModifyHandler" prefHeight="25.0" prefWidth="63.0" text="Modify" />
+        <Button fx:id="mainProductsDeleteHandler" layoutX="602.0" layoutY="295.0" mnemonicParsing="false" onAction="#mainProductsDeleteHandler" prefHeight="25.0" prefWidth="63.0" text="Delete" />
+    </children>
+</AnchorPane>
